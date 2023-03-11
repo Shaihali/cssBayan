@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+body {
+	font-family: 'Climate Crisis', cursive;
+}
+
+.bayan-container {
+	width: 30vw;
+	margin: 0 auto;
+}
+.bayan-title {
+}
+.bayan-item {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	padding-bottom: 15px;
+	margin-top: 50px;
+	border-bottom: 1px solid #000;
+}
+.text {
+	display: flex;
+	justify-content: space-between;
+}
+img {
+	height: 100%;
+}
+.img {
+	height: 0;
+	display: flex;
+	justify-content: center;
+	transition: height 0.5s ease-in;
+}
+input:checked ~ .img{
+	height: 15em;
+}
+input[type="radio"] {
+  opacity: 0;
+}
+label {
+	cursor: pointer;
+}
+.bayan-item:hover >.img{
+	height: 15em;
+}
+.icon {
+	opacity: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 5px solid #000;
+	border-width: 0 5px 0 0;
+	transform: rotate(90deg);
+	transition: transform 0.5s ease-in;
+}
+.bayan-item:hover .text >.icon {
+	transform: rotate(0deg);
+}
+input:checked + label >.icon {
+	transform: rotate(0deg);
+}
+.bayan-container:hover .bayan-item .text .icon{
+	opacity: 1;
+}
